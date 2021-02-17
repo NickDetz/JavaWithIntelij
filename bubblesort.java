@@ -1,4 +1,15 @@
 public class bubblesort {
+    /* @Nicholas Deters author
+    *bubble sort algorithm
+    * bubble sort iterates through the array
+    * compares it to the adjacent elements and swaps them
+    * accordingly.
+    * With this algorithm it uses a 2D array and
+    * has the ith element be the overall comparing element
+    * to then the jth element iterating through
+    * the rest of the array
+    * worst case is O(n^2)
+     */
 
     public static void main(String[] args) {
         int arr1[] = {1, 9, 10, 7, 5, 3, 4, 6};
