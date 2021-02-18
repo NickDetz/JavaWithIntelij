@@ -34,13 +34,23 @@ public class lambdainjava {
         greetService2.sayMessage("Deters");
 
         //More Testing with lambda's
-        MathOperation1 remainder = (int c, int d) -> c % d;
+        MathOperation1 remainder = (double c, double d) -> c % d;
+
+        MathOperation1 divisions = (double c, double d) -> d/c;
 
         System.out.println("50 % 9 = " + lambdainjava.operandi(50, 9, remainder ));
+        System.out.println("9 / 50 = " + lambdainjava.operandi(50, 9, divisions));
+        System.out.println("");
+
+        TalkingMachine talkingMach = (talking) ->
+                System.out.println(talking);
+
+        talkingMach.Talk("Hi how  are you");
+
 
     }
 
-    private static int operandi(int c, int d, MathOperation1 mathOperation1) {
+    private static double operandi(double c, double d, MathOperation1 mathOperation1) {
         return mathOperation1.operandi(c, d);
     }
 
@@ -57,6 +67,12 @@ public class lambdainjava {
     }
 
     interface  MathOperation1 {
-        int operandi(int c, int d);
+        double operandi(double c, double d);
     }
+
+    interface TalkingMachine {
+        void Talk(String talking);
+    }
+
+
 }
